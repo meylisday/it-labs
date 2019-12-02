@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Take user Input
+echo "Enter a latter : "
+read a
+
+# Switch Case to perform
+# calulator operations
+case $a in
+  а|о|и|е|э|ы|у|ю|я|ё)
+    echo "vowel"
+    ;;
+  *)
+    echo "consonant"
+    ;;
+esac
