@@ -1,0 +1,22 @@
+#!/bin/bash
+
+echo "Enter x"
+read x
+echo "Enter y"
+read y
+
+if [ $x -gt 0 ] && [ $y -gt 0 ]
+then
+    echo 'I fourth'
+elif [ $x -le 0 ] && [ $y -gt 0 ]
+then
+    echo 'II fourth'
+elif [ $x -le 0 ] && [ $y -le 0 ]
+then
+    echo 'III fourth'
+elif [ $x -gt 0 ] && [ $y -le 0 ]
+then
+    echo 'IV fourth'
+else
+    echo 'Not found!'
+fi
