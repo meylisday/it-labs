@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "Enter Choice :"
+echo "1. Find count files and folders in the current directory"
+echo "2. Print 10 lines in the current files"
+echo "3. List of the processes belongs to current user"
+read ch
+
+case $ch in
+  1) ls | wc -l
+  ;;
+  2) head -10 $(basename $(readlink -nf $0))
+  ;;
+  3) ps -a
+  ;;
+esac
