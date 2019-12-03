@@ -1,0 +1,22 @@
+#!/bin/bash
+
+echo "Enter a latter : "
+read a
+
+case $a in
+  (*['@#$%^&*()_+=']*)
+    echo "symbol"
+    ;;
+  (*[0-9]*)
+    echo "number"
+    ;;
+  (*[а-яА-Яa-zA-Z]*)
+    echo "latter"
+    ;;
+  (*['?!";:.,-']*)
+    echo "punctuation"
+    ;;
+  (*)
+    echo "consonant"
+    ;;
+esac
