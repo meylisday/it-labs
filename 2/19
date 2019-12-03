@@ -17,6 +17,6 @@ case $a in
     echo "punctuation"
     ;;
   (*)
-    echo "consonant"
+    echo "undefined"
     ;;
 esac
