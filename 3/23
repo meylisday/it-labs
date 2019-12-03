@@ -1,14 +1,14 @@
 #!/bin/bash
 
-echo "Enter Num1"
+echo "Enter Num"
 read num
 
-for((i=2; i<=num; i++))
-  do
-    if [ `expr $num % $i` == 0 ]
-      then
-        echo $num is not prime
-         exit
-    fi
+for((i=2; i<=num/2; i++))
+do
+  if [ $((num%i)) -eq 0 ]
+  then
+    echo "$num is not a prime number."
+    exit
+  fi
 done
-
+echo "$num is a prime number."
