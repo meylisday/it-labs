@@ -1,0 +1,18 @@
+#!/bin/bash
+
+function countofnumbers
+{
+    if [ "$1" -lt 10 ]
+    then
+        echo "$1"
+    else
+        z=$(($1 / 10))
+        modded=$(($1 % 10))
+        recursive_call=$(countofnumbers $z)
+        result=$((modded + recursive_call))
+    fi
+    echo "$result"
+}
+echo "Write a number"
+read z
+countofnumbers "$z"
