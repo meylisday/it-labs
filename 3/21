@@ -1,0 +1,10 @@
+#!/bin/bash
+sum=0
+n=0
+for i in $*
+do
+sum=`expr $sum + $i`
+n=`expr $n + 1`
+done
+avg=`expr $sum / $n`
+echo Average=$avg

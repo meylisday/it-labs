@@ -1,0 +1,7 @@
+#!/bin/bash
+
+dec=100     # decimal
+bin=1100100 # binary
+
+echo "obase=2;$dec" | bc      # 1100100 (decimal to binary)
+echo "obase=10;ibase=2;$bin" | bc # 100 (binary to decimal)
